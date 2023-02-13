@@ -49,10 +49,10 @@ N = size(dataR, 1);  %Number of spectra for correction
 disp(['There is ' num2str(N) ' spectra for correction...'])
     
 %% The actual correction
-[WN_corr1, correctedSpectra, history1, timing] = cylinders_EMSC(WN, ...
+[WN_corr, correctedSpectra, history, timing] = cylinders_EMSC(WN, ...
     dataR(1:3,:), correction_options); %Examplary correction for three pixels
    
-figure; plot(WN_corr1,correctedSpectra(1,:)); hold on; plot(WN, dataR(1,:))
+figure; plot(WN_corr,correctedSpectra(1,:)); hold on; plot(WN, dataR(1,:))
 
 % %% Shaping corrected data back into the 3D structure 
 % % only possible if the full dataset is corrected
